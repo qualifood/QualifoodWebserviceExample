@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" />
+  <xs:complexType name="AutoFOM">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MesswerteSW">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bauchgewicht" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Fleischmass" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Indexpunkte" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Kotelettgewicht" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Lachsgewicht" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Mfa" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MfaBauch" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SchinkenSchier" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Schinkengewicht" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Schinkenspeck1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Schinkenspeck2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Schinkenspeck3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SchulterSchier" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Schultergewicht" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Speckmass" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutoFOM" nillable="true" type="tns:AutoFOM" />
+  <xs:complexType name="MesswerteSW">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="MesswerteSW" nillable="true" type="tns:MesswerteSW" />
+  <xs:complexType name="HennessyFOM">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MesswerteSW">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fleischmass" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Mfa" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Reflektionswert" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Speckmass" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HennessyFOM" nillable="true" type="tns:HennessyFOM" />
+  <xs:complexType name="ArrayOfDatenDownloadUebersicht">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatenDownloadUebersicht" nillable="true" type="tns:DatenDownloadUebersicht" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatenDownloadUebersicht" nillable="true" type="tns:ArrayOfDatenDownloadUebersicht" />
+  <xs:complexType name="DatenDownloadUebersicht">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Gattung" type="q1:GattungDTO" />
+      <xs:element minOccurs="0" name="Schlachtdatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SchlachthofBetriebsnummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tieranzahl" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatenDownloadUebersicht" nillable="true" type="tns:DatenDownloadUebersicht" />
+</xs:schema>

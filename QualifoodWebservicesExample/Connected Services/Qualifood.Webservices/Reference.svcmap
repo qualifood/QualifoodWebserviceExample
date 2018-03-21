@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94468221-b5bd-48fb-9bba-b6bed2e998f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DatenDownload.xsd" MetadataType="Schema" ID="388a3af3-6631-4957-b37a-fea2070a8856" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd2" />
+    <MetadataFile FileName="DatenDownload1.xsd" MetadataType="Schema" ID="06a34fe6-1e68-4030-a61d-befeb4061453" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd3" />
+    <MetadataFile FileName="DatenDownload.wsdl" MetadataType="Wsdl" ID="dca91870-937a-4e9b-aa29-8790c309e503" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DatenDownload2.xsd" MetadataType="Schema" ID="cc42e7a7-df40-493f-888d-7d0246d89c9a" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd1" />
+    <MetadataFile FileName="DatenDownload3.xsd" MetadataType="Schema" ID="9c81cfb0-1602-4e8a-86ac-47080066c157" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd0" />
+    <MetadataFile FileName="DatenDownload4.xsd" MetadataType="Schema" ID="140573fb-c0b3-4e39-9c42-eca4028435d8" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd4" />
+    <MetadataFile FileName="DatenDownload5.xsd" MetadataType="Schema" ID="c7abbe5e-5443-4a72-97e0-950b6889fbbf" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd5" />
+    <MetadataFile FileName="DatenDownload1.wsdl" MetadataType="Wsdl" ID="15eee263-d8d6-4af8-b170-2c81dfc095ea" SourceId="1" SourceUrl="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

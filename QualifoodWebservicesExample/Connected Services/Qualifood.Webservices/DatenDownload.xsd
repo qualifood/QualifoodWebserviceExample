@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" />
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.Schlachtdaten" />
+  <xs:element name="GetDatenDownloadUebersicht">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SchlachtdatumVon" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SchlachtdatumBis" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatenDownloadUebersichtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" minOccurs="0" name="GetDatenDownloadUebersichtResult" nillable="true" type="q1:ArrayOfDatenDownloadUebersicht" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HalloService">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HalloServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HalloServiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatenDownloadSW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Schlachtdatum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatenDownloadSWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.Schlachtdaten" minOccurs="0" name="GetDatenDownloadSWResult" nillable="true" type="q2:SchlachtdatenSW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatenDownloadGV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Schlachtdatum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatenDownloadGVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.Schlachtdaten" minOccurs="0" name="GetDatenDownloadGVResult" nillable="true" type="q3:SchlachtdatenGV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

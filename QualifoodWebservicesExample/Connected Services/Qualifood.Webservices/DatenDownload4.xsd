@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.Schlachtdaten" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.Schlachtdaten" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" />
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" />
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SchlachtdatenSW">
+    <xs:sequence>
+      <xs:element name="Schlachtkoerper" nillable="true" type="tns:ArrayOfSchlachtkoerperSW" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Stammdaten" nillable="true" type="q1:ArrayOfStammdaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchlachtdatenSW" nillable="true" type="tns:SchlachtdatenSW" />
+  <xs:complexType name="ArrayOfSchlachtkoerperSW">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchlachtkoerperSW" nillable="true" type="tns:SchlachtkoerperSW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchlachtkoerperSW" nillable="true" type="tns:ArrayOfSchlachtkoerperSW" />
+  <xs:complexType name="SchlachtkoerperSW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anliefernummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ausgeschnitten" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Ausgleichsgewicht" nillable="true" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" minOccurs="0" name="AutoFom" nillable="true" type="q2:AutoFOM" />
+      <xs:element minOccurs="0" name="BakterielleUntersuchung" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BauchBewertung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bemerkung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Binneneber" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Eichspeichernummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FerkelherkunftAufzucht" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FerkelherkunftGeburt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreiTextVeterinaer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Genussuntauglich" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Geruch" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Gesamtpreis" type="xs:decimal" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Geschlecht" nillable="true" type="q3:NumerischerCode" />
+      <xs:element minOccurs="0" name="Handelsklasse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HemmstoffTest" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts.DatenDownload" minOccurs="0" name="HennessyFom" nillable="true" type="q4:HennessyFOM" />
+      <xs:element minOccurs="0" name="InterneKlasse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LaufendeNummer" type="xs:int" />
+      <xs:element minOccurs="0" name="LfWert" nillable="true" type="xs:decimal" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Lieferant" nillable="true" type="q5:Betrieb" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Mastbetrieb" nillable="true" type="q6:Betrieb" />
+      <xs:element minOccurs="0" name="Nettogewicht" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PhWert" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreisKg" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Preisgruppe" nillable="true" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Produktionsart" nillable="true" type="q7:NumerischerCode" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Provisionaer" nillable="true" type="q8:Betrieb" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Qualitaetsprogramme" nillable="true" type="q9:ArrayOfNumerischerCode" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Salmonellenprobenart" nillable="true" type="q10:NumerischerCode" />
+      <xs:element minOccurs="0" name="Salmonellenprobennummer" nillable="true" type="xs:string" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Schlachtart" nillable="true" type="q11:NumerischerCode" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Schlachtbetrieb" nillable="true" type="q12:Betrieb" />
+      <xs:element minOccurs="0" name="Schlachtdatum" type="xs:dateTime" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Schlachthof" nillable="true" type="q13:Betrieb" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Spedition" nillable="true" type="q14:Betrieb" />
+      <xs:element minOccurs="0" name="Taetowierung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Teilschaden" type="xs:boolean" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Veterinaerbefunde" nillable="true" type="q15:ArrayOfNumerischerCode" />
+      <xs:element minOccurs="0" name="VorlaeufigBeschlagnahmt" type="xs:boolean" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="WeitereMerkmale" nillable="true" type="q16:ArrayOfMerkmal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchlachtkoerperSW" nillable="true" type="tns:SchlachtkoerperSW" />
+  <xs:complexType name="SchlachtdatenGV">
+    <xs:sequence>
+      <xs:element name="Schlachtkoerper" nillable="true" type="tns:ArrayOfSchlachtkoerperGV" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Stammdaten" nillable="true" type="q17:ArrayOfStammdaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchlachtdatenGV" nillable="true" type="tns:SchlachtdatenGV" />
+  <xs:complexType name="ArrayOfSchlachtkoerperGV">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchlachtkoerperGV" nillable="true" type="tns:SchlachtkoerperGV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchlachtkoerperGV" nillable="true" type="tns:ArrayOfSchlachtkoerperGV" />
+  <xs:complexType name="SchlachtkoerperGV">
+    <xs:sequence>
+      <xs:element name="BemerkungKlassifizierer" nillable="true" type="xs:string" />
+      <xs:element name="Fettstufe" nillable="true" type="xs:string" />
+      <xs:element name="Gattung" nillable="true" type="xs:string" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Geburtsbetrieb" nillable="true" type="q18:Betrieb" />
+      <xs:element name="Geburtsdatum" type="xs:dateTime" />
+      <xs:element name="Geburtsland" nillable="true" type="xs:string" />
+      <xs:element name="Handelsklasse" nillable="true" type="xs:string" />
+      <xs:element name="Hautfarbe" nillable="true" type="xs:string" />
+      <xs:element name="Hautgewicht" type="xs:decimal" />
+      <xs:element name="Hautnummer" type="xs:int" />
+      <xs:element name="Hautverschmutzungsgrad" type="xs:int" />
+      <xs:element name="HitRassenschluessel" nillable="true" type="xs:string" />
+      <xs:element name="InterneKlasse" nillable="true" type="xs:string" />
+      <xs:element name="LaufendeNummer" type="xs:int" />
+      <xs:element name="Lebendgewicht" type="xs:decimal" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Lieferant" nillable="true" type="q19:Betrieb" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Mastbetrieb" nillable="true" type="q20:Betrieb" />
+      <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Mastlaender" nillable="true" type="q21:ArrayOfstring" />
+      <xs:element name="Nettogewicht" type="xs:decimal" />
+      <xs:element name="Ohrmarke" nillable="true" type="xs:string" />
+      <xs:element name="QualitaetsprogrammSchlachthof" type="xs:int" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Qualitaetsprogramme" nillable="true" type="q22:ArrayOfNumerischerCode" />
+      <xs:element name="Schadensgewicht" type="xs:decimal" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Schlachtart" nillable="true" type="q23:NumerischerCode" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Schlachtbetrieb" nillable="true" type="q24:Betrieb" />
+      <xs:element name="Schlachtdatum" type="xs:dateTime" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Schlachthof" nillable="true" type="q25:Betrieb" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Spedition" nillable="true" type="q26:Betrieb" />
+      <xs:element name="Verzielungskennzeichen" type="xs:int" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" minOccurs="0" name="Veterinaerbeanstandung" nillable="true" type="q27:NumerischerCode" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="Veterinaerbefunde" nillable="true" type="q28:ArrayOfNumerischerCode" />
+      <xs:element name="Veterinaerbemerkung" nillable="true" type="xs:string" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" name="WeitereMerkmale" nillable="true" type="q29:ArrayOfMerkmal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchlachtkoerperGV" nillable="true" type="tns:SchlachtkoerperGV" />
+</xs:schema>

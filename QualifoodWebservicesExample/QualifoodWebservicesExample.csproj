@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +44,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\Qualifood.Webservices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload.wsdl" />
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload1.wsdl" />
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\DatenDownload5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\QualifoodWebservicesExample.Qualifood.Webservices.DatenDownloadUebersicht.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\QualifoodWebservicesExample.Qualifood.Webservices.SchlachtdatenGV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Qualifood.Webservices\QualifoodWebservicesExample.Qualifood.Webservices.SchlachtdatenSW.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Qualifood.Webservices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Qualifood.Webservices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Qualifood.Webservices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Qualifood.Webservices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

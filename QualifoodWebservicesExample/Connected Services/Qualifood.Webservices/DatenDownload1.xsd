@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Qualifood.WebServices.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices.qualifood.de/DatenDownload/DatenDownload.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="GattungDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Schwein">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Rind">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Schaf">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GattungDTO" nillable="true" type="tns:GattungDTO" />
+  <xs:complexType name="NumerischerCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Nummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumerischerCode" nillable="true" type="tns:NumerischerCode" />
+  <xs:complexType name="Betrieb">
+    <xs:sequence>
+      <xs:element name="Betriebsnummer" nillable="true" type="xs:string" />
+      <xs:element name="InterneNummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Betrieb" nillable="true" type="tns:Betrieb" />
+  <xs:complexType name="ArrayOfNumerischerCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NumerischerCode" nillable="true" type="tns:NumerischerCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNumerischerCode" nillable="true" type="tns:ArrayOfNumerischerCode" />
+  <xs:complexType name="ArrayOfMerkmal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Merkmal" nillable="true" type="tns:Merkmal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerkmal" nillable="true" type="tns:ArrayOfMerkmal" />
+  <xs:complexType name="Merkmal">
+    <xs:sequence>
+      <xs:element name="Bezeichnung" nillable="true" type="xs:string" />
+      <xs:element name="Wert" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Merkmal" nillable="true" type="tns:Merkmal" />
+  <xs:complexType name="ArrayOfStammdaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stammdaten" nillable="true" type="tns:Stammdaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStammdaten" nillable="true" type="tns:ArrayOfStammdaten" />
+  <xs:complexType name="Stammdaten">
+    <xs:sequence>
+      <xs:element name="AnschriftZusatz" nillable="true" type="xs:string" />
+      <xs:element name="Betriebsnummer" nillable="true" type="xs:string" />
+      <xs:element name="Email" nillable="true" type="xs:string" />
+      <xs:element name="Fax" nillable="true" type="xs:string" />
+      <xs:element name="Handy" nillable="true" type="xs:string" />
+      <xs:element name="Land" nillable="true" type="xs:string" />
+      <xs:element name="Name1" nillable="true" type="xs:string" />
+      <xs:element name="Name2" nillable="true" type="xs:string" />
+      <xs:element name="Ort" nillable="true" type="xs:string" />
+      <xs:element name="Postleitzahl" nillable="true" type="xs:string" />
+      <xs:element name="Strasse" nillable="true" type="xs:string" />
+      <xs:element name="Telefon" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Stammdaten" nillable="true" type="tns:Stammdaten" />
+</xs:schema>
